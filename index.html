@@ -71,13 +71,15 @@
             z-index: 1;
         }
         
-        /* Love Letter Section */
+        /* Love Letter Section with Glass Effect */
         .love-letter {
             max-width: 800px;
             margin: 80px auto;
             padding: 50px;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             position: relative;
             opacity: 0;
@@ -212,12 +214,19 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         }
         
+        /* Updated Photo Caption with Glass Effect */
         .photo-caption {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            background: linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.4)
+            );
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
             color: white;
             padding: 25px;
             transform: translateY(100%);
@@ -230,7 +239,7 @@
             transform: translateY(0);
         }
         
-        /* Quote Section */
+        /* Quote Section with Glass Effect */
         .quote-section {
             height: 70vh;
             background: linear-gradient(rgba(255, 245, 245, 0.9), rgba(255, 245, 245, 0.9)), 
@@ -246,7 +255,10 @@
         .quote-box {
             max-width: 800px;
             padding: 50px;
-            background-color: rgba(255, 255, 255, 0.92);
+            background-color: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
             transform: scale(0.95);
@@ -355,6 +367,8 @@
             .love-letter {
                 padding: 30px 20px;
                 margin: 40px 20px;
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
             }
             
             .quote {
@@ -367,6 +381,12 @@
             
             .photo-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .quote-box {
+                padding: 30px 20px;
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
             }
         }
     </style>
